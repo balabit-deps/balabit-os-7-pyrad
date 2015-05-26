@@ -1,0 +1,47 @@
+Source: pyrad
+Section: python
+Priority: optional
+Maintainer: Jeremy Lainé <jeremy.laine@m4x.org>
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>, Bjorn Ove Grotan <bgrotan@grotan.com> 
+Build-Depends: debhelper (>= 9),
+               dh-python,
+               python-all,
+               python-setuptools,
+               python3-all,
+               python3-setuptools
+Standards-Version: 3.9.6
+Homepage: http://pypi.python.org/pypi/pyrad
+Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/pyrad/trunk/
+Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/pyrad/trunk/
+X-Python-Version: >= 2.6
+X-Python3-Version: >= 3.2
+
+Package: python-pyrad
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Python module for creating and decoding RADIUS packets (Python 2)
+ It takes care of all the details like building RADIUS 
+ packets, sending them and decoding responses.
+ This package contains several modules:
+  - client: RADIUS client code
+  - dictionary: RADIUS attribute dictionary
+  - server: Basic RADIUS server and proxy classes.
+  - packet: a RADIUS packet as send to/from servers
+  - tools: utility functions
+ .
+ This package contains the module for Python 2.
+
+Package: python3-pyrad
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}
+Description: Python module for creating and decoding RADIUS packets (Python 3)
+ It takes care of all the details like building RADIUS 
+ packets, sending them and decoding responses.
+ This package contains several modules:
+  - client: RADIUS client code
+  - dictionary: RADIUS attribute dictionary
+  - server: Basic RADIUS server and proxy classes.
+  - packet: a RADIUS packet as send to/from servers
+  - tools: utility functions
+ .
+ This package contains the module for Python 3.

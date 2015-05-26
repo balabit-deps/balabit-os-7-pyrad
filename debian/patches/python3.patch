@@ -1,0 +1,16 @@
+Tuple parameter unpacking was removed in Python 3, see:
+
+https://www.python.org/dev/peps/pep-3113/
+
+--- a/pyrad/curved.py
++++ b/pyrad/curved.py
+@@ -35,7 +35,8 @@
+     def createPacket(self, **kwargs):
+         raise NotImplementedError('Attempted to use a pure base class')
+ 
+-    def datagramReceived(self, datagram, (host, port)):
++    def datagramReceived(self, datagram, source):
++        host, port = source
+         try:
+             pkt = self.CreatePacket(packet=datagram)
+         except packet.PacketError as err:
